@@ -37,3 +37,7 @@ body {
     padding: 1.25rem;
     max-width: 90%;
 }
+
+.footer-style {
+    background-color: aliceblue;
+}
