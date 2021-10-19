@@ -24,3 +24,16 @@ body {
     height: 60% !important;
     width: 100%;
 }
+
+.icon {
+    color: yellow;
+}
+
+.info-container {
+    background-color: black;
+}
+
+.team-photo {
+    padding: 1.25rem;
+    max-width: 90%;
+}

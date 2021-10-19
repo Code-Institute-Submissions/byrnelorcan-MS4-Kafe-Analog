@@ -52,7 +52,7 @@
               <li class="list-inline-item dropdown">
                 <div class="dropdown">
                   <button class="btn" type="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="far fa-user"></i>
+                    <i class="far fa-user icon"></i>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
@@ -72,7 +72,7 @@
               <li class="list-inline-item">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                   <div class="text-center">
-                      <div><i class="fas fa-shopping-basket"></i></div>
+                      <div><i class="fas fa-shopping-basket icon"></i></div>
                       <p class="my-0">
                           {% if grand_total %}
                               ${{ grand_total|floatformat:2 }}
@@ -86,7 +86,7 @@
               <li class="list-inline-item dropdown">
                 <div class="class="dropdown">
                   <button class="btn" type="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-30,20">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search icon"></i>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="user-options">
                     <form method="GET" action="">
