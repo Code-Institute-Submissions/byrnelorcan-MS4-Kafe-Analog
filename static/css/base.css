@@ -60,6 +60,8 @@ body {
 .card {
     width: 300px !important;
     border: 0;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .card-img-top {
