@@ -41,3 +41,29 @@ body {
 .footer-style {
     background-color: aliceblue;
 }
+
+.products-page {
+    color: black;
+    padding-top: 3.5rem;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: beige;
+    z-index: -1;
+}
+
+.card {
+    width: 300px !important;
+    border: 0;
+}
+
+.card-img-top {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}

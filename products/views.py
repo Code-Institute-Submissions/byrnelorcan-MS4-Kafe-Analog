@@ -1,17 +1,15 @@
 from django.shortcuts import render
-from .models import Vinyl, Coffee
+from .models import Products
 
 
 # Create your views here.
 def all_products(request):
     """ A view that renders all products page """
 
-    vinyls = Vinyl.objects.all()
-    coffees = Coffee.objects.all()
+    products = Products.objects.all()
 
     context = {
-        'vinyls': vinyls,
-        'coffees': coffees,
+        'products': products,
     }
 
     product_page = 'products/products.html'

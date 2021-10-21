@@ -12,18 +12,42 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-3 my-auto">
-                <h4>Here is our vinyl:</h4>
-                {{ vinyls }}
-                
+    <div class="overlay"></div>
+    <div class="container-fluid px-4 products-page">
+        <div class="row gx-5">
+            <div class="col-6 p-3 my-auto">
+                <h3>Our Collection:</h3>
             </div>
-            <div class="col-3 my-auto">
-                <h4>Here is our coffee:</h4>
-                {{ coffees }}
-                
+            <div class="col-6 p-3 my-auto">
+                <p>Search</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container">
+                <div class="row mb-2 mt-1"></div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            
+                                <div class="card" style="width: 18rem;">
+                                    {% if product.image %}
+                                        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                                    {% else %}
+                                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="...">
+                                    {% endif %}
+                                    <div class="card-body">
+                                      <h5 class="card-title">{{ product.name }}</h5>
+                                      <h6 class="">{{ product.artist }}</h6>
+                                      <p>{{ product.genre }}</p>
+                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                  </div>
+                            
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
+
 {% endblock %}
