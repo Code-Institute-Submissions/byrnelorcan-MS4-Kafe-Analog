@@ -19,7 +19,12 @@
                 <h3>Our Collection:</h3>
             </div>
             <div class="col-6 p-3 my-auto">
-                <p>Search</p>
+                <div class="container-fluid">
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
             </div>
         </div>
         <div class="row">
@@ -36,10 +41,20 @@
                                         <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="...">
                                     {% endif %}
                                     <div class="card-body">
-                                      <h5 class="card-title">{{ product.name }}</h5>
-                                      <h6 class="">{{ product.artist }}</h6>
-                                      <p>{{ product.genre }}</p>
-                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5 class="card-title">{{ product.name }}</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <h6 class="">{{ product.artist }}</h6>
+                                            </div>
+                                            <div class="col-6">
+                                                <p>{{ product.genre }}</p>
+                                            </div>
+                                            <div class="col-6 align-self-center">
+                                                <strong>€{{ product.price }}</strong>
+                                            </div>
+                                      </div>
                                     </div>
                                   </div>
                             
