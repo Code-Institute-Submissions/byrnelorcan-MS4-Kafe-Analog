@@ -87,3 +87,14 @@ body {
     color: grey;
     font-weight: 200;
 }
+
+.padding {
+    padding-top: inherit;
+    padding-bottom: 20px;
+}
+
+.product-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}

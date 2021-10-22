@@ -15,37 +15,43 @@
     <div class="overlay"></div>
     <div class="detail-wrapper">
         <div class="container-fluid products-page">
-            <div class="row gx-5">
+            <div class="row gx-5 padding">
                 <div class="col-12 col-md-6">
                     <div>
                         {% if product.image %}
-                            <img src="{{ product.image.url }}" alt="" class="card-img-top">
+                            <img src="{{ product.image.url }}" alt="" class="product-image">
                             {% else %}
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="" class="card-img-top">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="" class="product-image">
                         {% endif %}
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <strong>{{ product.name }}</strong><br>
-                    {{ product.artist }}<br>
-                    <a href="">{{ product.genre }}</a>|{{ product.sub_genre }}
+                    <h2><strong>{{ product.name }}</strong></h2>
+                    <h4>{{ product.artist }}<br></h4>
+                    <h5>
+                        <a href="">{{ product.genre }}</a>|{{ product.sub_genre }}
+                    </h5>
                     <div class="col-12 col-md-6">
-                        <strong>€{{ product.price }}</strong>
+                        <h4><strong>€{{ product.price }}</strong></h4>
                     </div>
                     <div class="col-12">
+                        <p>
                         <button type="button" class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add to Cart</button> 
                         <button type="button" class="btn btn-light"><i class="far fa-heart"></i> Add to Wishlist</button> 
+                        </p>
                     </div>
                     <div class="col-12">
+                        
                         {% if product.in_stock == True %}
-                                <span class="in-stock"><i class="fas fa-dot-circle"></i> In Stock </span>|<span class="product-shipping"> Standard shipping 3-5 days</span>
+                                <p><span class="in-stock"><i class="fas fa-dot-circle"></i> In Stock </span>|<span class="product-shipping"> Standard shipping 3-5 days</span></p>
                             {% else %}
-                                <span class="out-stock"><i class="far fa-dot-circle"></i> Out of Stock </span>|<span class="product-shipping"> Ships in 1-2 weeks</span>
+                                <p><span class="out-stock"><i class="far fa-dot-circle"></i> Out of Stock </span>|<span class="product-shipping"> Ships in 1-2 weeks</span></p>
                         {% endif %}
+                        
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row padding">
                 <div class="col-12">
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
