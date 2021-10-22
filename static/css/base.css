@@ -82,3 +82,8 @@ body {
 .out-stock {
     color: red;
 }
+
+.product-shipping {
+    color: grey;
+    font-weight: 200;
+}

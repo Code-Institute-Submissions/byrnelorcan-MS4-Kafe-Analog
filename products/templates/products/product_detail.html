@@ -38,9 +38,9 @@
                     </div>
                     <div class="col-12">
                         {% if product.in_stock == True %}
-                                <span class="in-stock"><i class="fas fa-dot-circle"></i></i> In stock</span>
+                                <span class="in-stock"><i class="fas fa-dot-circle"></i> In Stock </span>|<span class="product-shipping"> Standard shipping 3-5 days</span>
                             {% else %}
-                                <span class="out-stock"><i class="far fa-dot-circle"></i> Out of stock</span>
+                                <span class="out-stock"><i class="far fa-dot-circle"></i> Out of Stock </span>|<span class="product-shipping"> Ships in 1-2 weeks</span>
                         {% endif %}
                     </div>
                 </div>
@@ -51,39 +51,72 @@
                         <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                                <strong>Product Description</strong>
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" >
                             <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                {{ product.description }}
                             </div>
                         </div>
                         </div>
                         <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                                <strong>Product Details</strong>
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
                             <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                {% if product.product_id %}
+                                    <span><strong>Product ID:</strong> {{ product.product_id }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.category %}
+                                    <span><strong>Product Type:</strong> {{ product.category }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.condition %}
+                                    <span><strong>Condition:</strong> {{ product.condition }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.name %}
+                                    <span><strong>Name:</strong> {{ product.name }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.artist %}
+                                    <span><strong>Artist:</strong> {{ product.artist }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.sub_genre %}
+                                    <span><strong>Sub Genre:</strong> {{ product.sub_genre }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.genre %}
+                                    <span><strong>Genre:</strong> {{ product.genre }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.year %}
+                                    <span><strong>Release:</strong> {{ product.year }}</span>
+                                    {% else %}
+                                {% endif %}
+                                <br>
+                                {% if product.in_stock == True %}
+                                    <span class="in-stock"><i class="fas fa-dot-circle"></i> In Stock </span>|<span class="product-shipping"> Standard shipping 3-5 days</span>
+                                {% else %}
+                                    <span class="out-stock"><i class="far fa-dot-circle"></i> Out of Stock </span>|<span class="product-shipping"> Ships in 1-2 weeks</span>
+                                {% endif %}
                             </div>
                         </div>
                         </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
