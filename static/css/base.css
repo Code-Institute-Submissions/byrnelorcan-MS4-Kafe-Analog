@@ -69,3 +69,16 @@ body {
     height: 300px;
     object-fit: cover;
 }
+
+.detail-wrapper {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.in-stock {
+    color: green;
+}
+
+.out-stock {
+    color: red;
+}
