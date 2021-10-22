@@ -71,7 +71,7 @@
               </li>
               <!-- FIX NEEDED TO ONLY SHOW ITEMS ADDED TO CART NOT COST, FIX TO WAY CALCULATED N.N.B -->
               <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-basket icon"></i></div>
                       <p class="my-0">
