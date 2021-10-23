@@ -98,3 +98,7 @@ body {
     height: 350px;
     object-fit: cover;
 }
+
+.text-right {
+    text-align: end;
+}
