@@ -102,3 +102,9 @@ body {
 .text-right {
     text-align: end;
 }
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
