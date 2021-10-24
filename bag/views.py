@@ -33,13 +33,16 @@ def add_to_bag(request, item_id):
 def edit_bag(request, item_id):
     """ Edit the quantity of the specified product to the shopping bag """
 
+    products = Products.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
     if quantity > 0:
         bag[item_id] = quantity
+        messages.success(request, f'Added {products.name} to your cart!')
     else:
         bag.pop(item_id)
+        messages.success(request, f'Removed {products.name} from your cart!')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -49,11 +52,14 @@ def remove_from_bag(request, item_id):
     """ Remove specified product from the shopping bag """
 
     try:
+        products = Products.objects.get(pk=item_id)
         bag = request.session.get('bag', {})
         bag.pop(item_id)
+        messages.success(request, f'Removed {products.name} from your cart!')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
