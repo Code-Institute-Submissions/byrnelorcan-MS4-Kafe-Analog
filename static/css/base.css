@@ -105,6 +105,6 @@ body {
 
 .btt-link,
 .update-link,
-.remove-item {
+.delete-item {
     cursor: pointer;
 }
