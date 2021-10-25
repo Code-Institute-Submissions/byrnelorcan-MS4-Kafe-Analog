@@ -82,11 +82,11 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():
-                    product = Products.objects.get(id=item_id)
+                    products = Products.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            products=products,
                             quantity=item_data,
                         )
                         order_line_item.save()
@@ -94,7 +94,7 @@ class StripeWH_Handler:
                         for quantity in item_data.items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                product=product,
+                                products=products,
                                 quantity=quantity,
                             )
                             order_line_item.save()
