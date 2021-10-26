@@ -36,21 +36,21 @@
   </head>
   <body>
       <header class="container-fluid fixed-top nav-header">
-        <div class="row d-md-flex">
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row d-md-flex d-none d-md-block">
+          <div class="col-12 col-sm-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item"><a href="{% url 'products' %}?category=vinyl" class="nav-link">Vinyl</a></li>
               <li class="list-inline-item"><a href="{% url 'products' %}?category=coffee" class="nav-link">Coffee</a></li>
               <li class="list-inline-item"><a href="{% url 'blog' %}" class="nav-link">Club</a></li>
           </ul>
           </div>
-          <div class="d-sm-none d-md-block col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <div class="d-sm-none d-md-block col-12 col-sm-4 my-auto py-1 py-lg-0">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
               <h2 class="logo-font my-0">Kafe Analog<strong>.</strong></h2>
             </a>
           </div>
           
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <div class="col my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item dropdown">
                 <div class="dropdown">
@@ -131,6 +131,56 @@
           </div>
         </div>
         
+        <nav class="navbar navbar-expand-lg navbar-dark d-none d-sm-block d-md-none">
+          <div class="container-fluid ">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+              <h2 class="logo-font my-0">Kafe Analog<strong>.</strong></h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'products' %}?category=vinyl">Vinyl</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'products' %}?category=coffee">Coffee</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog' %}">Club</a>
+                </li>
+                <li class="nav-item">
+                    {% if request.user.is_authenticated %}
+                      {% if request.user.is_superuser %}
+                        <li><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></li>
+                        <li><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></li>
+                      {% endif %}
+                      <li><a href="{% url 'profile' %}" class="nav-link">Profile</a></li>
+                      <li><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
+                    {% else %}
+                      <li><a href="{% url 'account_signup' %}" class="nav-link">Register</a></li>
+                      <li><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'view_bag' %}">
+                    Your Cart
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <button class="btn" type="submit"><i class="fas fa-search icon"></i></button>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
       </header>
     
         {% if messages %}
@@ -165,7 +215,7 @@
           let option = {
               animation: true,
               autohide: true,
-              delay: 5000,
+              delay: 7000,
           }
           let bsToast = new bootstrap.Toast(toastEl, option)
           bsToast.show();
@@ -181,6 +231,34 @@
         {% endblock %}
 
         <footer>
+          <div class="info-container h-50">
+            <div class="row h-100">
+                <div class="col-12 col-md-6">
+                    <h3>
+                        Who we are?
+                    </h3>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas 
+                        sit aspernatur aut odit aut fugit, sed quia 
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                    </p>
+                    <h3>
+                        Where to find us!
+                    </h3>
+                    <p>
+                        24 Test Address <br>
+                        This Street <br>
+                        Co. Dublin<br>
+                        Ireland
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="team-photo">
+                        <img src="/media/team.jpg" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
           <header class="container-fluid footer-style">
             <div class="row">
               <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
