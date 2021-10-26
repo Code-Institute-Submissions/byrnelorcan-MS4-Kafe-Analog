@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             {% for blog in blog %}
-            
+            <a href="{% url 'blog_detail' blog.id %}">
                 <div class="col-12 col-md-6">
                     <div class="card blog-card bg-dark text-black">
                         {% if blog.image %}
@@ -37,6 +37,7 @@
                         </div>
                       </div>
                 </div> 
+            </a>
             {% endfor %}
             
         </div>
@@ -46,8 +47,3 @@
 {% endblock %}
 
 
-<!--{% if blog.image %}
-                        <img class="card-img" src="{{ blog.image.url }}" alt="Card image">
-                        {% else %}
-                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="Card image">
-                        {% endif %}
