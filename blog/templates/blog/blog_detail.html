@@ -15,6 +15,12 @@
     <div class="overlay"></div>
     <div class="container-fluid px-4 products-page">
         <div class="row gx-5">
+            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                    <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
+                            </small>
+            {% endif %}
             <div class="col-6 p-3 my-auto">
                 <h3>{{ blog.blog_title}}</h3>
                 
