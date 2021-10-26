@@ -14,22 +14,29 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid px-4 products-page">
+        <div class="row gx-5">
+            <div class="col-6 p-3 my-auto">
+                <h3>Welcome to the Kafe Analog Club</h3>
+                <p>Here you'll find our ltest reviews, news and interesting pieces. All curated specially for our club members.</p>
+            </div>
+        </div>
         <div class="row">
             {% for blog in blog %}
-            <div class="col">
-                    <div class="card bg-dark text-black h-100">
+            
+                <div class="col-12 col-md-6">
+                    <div class="card blog-card bg-dark text-black">
                         {% if blog.image %}
                         <img class="card-img" src="{{ blog.image.url }}" alt="Card image">
                         {% else %}
                         <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="Card image">
                         {% endif %}
+                        
                         <div class="card-img-overlay">
-                        <h5 class="card-title">{{ blog.blog_title }}</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                          <h5 class="card-title">{{ blog.blog_title }}</h5>
+                          
                         </div>
-                    </div>
-            </div>
+                      </div>
+                </div> 
             {% endfor %}
             
         </div>
@@ -37,3 +44,10 @@
     </div>
 
 {% endblock %}
+
+
+<!--{% if blog.image %}
+                        <img class="card-img" src="{{ blog.image.url }}" alt="Card image">
+                        {% else %}
+                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="Card image">
+                        {% endif %}

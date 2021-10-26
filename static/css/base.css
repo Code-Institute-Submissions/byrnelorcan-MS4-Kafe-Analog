@@ -222,3 +222,12 @@ body {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card {
+    width: auto! important;
+}
