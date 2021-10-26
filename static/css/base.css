@@ -332,3 +332,7 @@ footer{
     background-color: black;
     color: #f2c94c;
 }
+
+.text-info {
+    color: #f2c94c! important;
+}

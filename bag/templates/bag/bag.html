@@ -32,7 +32,7 @@
                                 <tr>
                                     <th scope="col">Product:</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price:</th>
+                                    <th class="d-none d-sm-block" scope="col">Price:</th>
                                     <th scope="col">Oty:</th>
                                     <th scope="col">Subtotal:</th> 
                                 </tr>
@@ -53,7 +53,7 @@
                                         {% endif %}
                                         <p class="my-0 small text-muted">ID: {{ item.product.product_id }}</p>
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 d-none d-sm-block">
                                         <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
