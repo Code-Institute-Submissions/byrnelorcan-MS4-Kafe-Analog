@@ -87,8 +87,34 @@
                   </div>
               </a>
               </li>
-              <li class="list-inline-item dropdown">
-                <div class="class="dropdown">
+              <li class="list-inline-item">
+                <!-- Button trigger modal -->
+                  <button class="btn" type="button" id="user-options" data-bs-toggle="modal" aria-expanded="false" data-bs-target="#exampleModal">
+                    <i class="fas fa-search icon"></i>
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal" id="exampleModal" tabindex="9999" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header text-danger">
+                          <h5 class="modal-title" id="exampleModalLabel">Search our collection</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form method="GET" action="{% url 'products' %}">
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                <button class="btn" type="submit"><i class="fas fa-search icon"></i></button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                                  
+                
+                <!--<div class="class="dropdown">
                   <button class="btn" type="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-30,20">
                     <i class="fas fa-search icon"></i>
                   </button>
@@ -98,8 +124,8 @@
                           <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                       </div>
                   </form>
-                  </ul>
-                </div>
+                </ul>
+                </div>-->
               </li>
             </ul>
           </div>
@@ -142,6 +168,13 @@
           }
           let bsToast = new bootstrap.Toast(toastEl, option)
           bsToast.show();
+          })
+
+          var myModal = document.getElementById('myModal')
+          var myInput = document.getElementById('myInput')
+
+          myModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
           })
         </script>
         {% endblock %}

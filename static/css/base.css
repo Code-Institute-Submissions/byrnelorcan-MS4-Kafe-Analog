@@ -14,10 +14,7 @@ body {
     background-color: rgb(26, 25, 25);
 }
 
-.landing-image {
-    background: url('/media/landing.jpg') no-repeat center center;
-    background-size: cover;
-}
+
 
 .landing-container {
     margin: 0;
@@ -230,4 +227,12 @@ body {
 
 .blog-card {
     width: auto! important;
+}
+
+.modal {
+    z-index: 9999999999;
+}
+
+.modal-backdrop.show {
+    z-index: auto;
 }
