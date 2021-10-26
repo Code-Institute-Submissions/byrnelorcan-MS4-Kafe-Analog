@@ -9,7 +9,7 @@ body {
     background: rgb(0, 0, 0);
     background-size: cover;
     /*height: calc(100vh - 164px);*/
-    color: aliceblue;
+    color: rgb(253, 253, 253);
     font-family: 'Montserrat', sans-serif;
     
     min-height: 100vh;
@@ -92,7 +92,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: beige;
+    background: whitesmoke;
     z-index: -1;
 }
 
@@ -100,6 +100,7 @@ body {
     color: black;
 }
 
+/* https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
 footer{
     margin-top: auto;
 }
@@ -285,4 +286,36 @@ footer{
 
 .modal-backdrop.show {
     z-index: auto;
+}
+
+.custom-select {
+    width: 100%;
+    font-size: large;
+}
+
+.logo-font {
+    font-family: 'Comfortaa', sans-serif;
+    
+    text-transform: lowercase! important;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.padding-top {
+    padding-top: 15px;
+}
+
+.btn-light {
+    background-color: #f2c94c;
 }
