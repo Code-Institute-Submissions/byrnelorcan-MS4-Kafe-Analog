@@ -8,9 +8,13 @@ html {
 body {
     background: rgb(0, 0, 0);
     background-size: cover;
-    height: 100vh;
+    /*height: calc(100vh - 164px);*/
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-header {
@@ -55,13 +59,26 @@ body {
     background-color: black;
 }
 
+.info-style {
+    padding: 30px;
+    font-weight: 300;
+}
+
 .team-photo {
     padding: 1.25rem;
-    max-width: 90%;
+    align-items: center;
 }
 
 .footer-style {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.footer-logo-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 500;
+    text-transform: lowercase! important;
+    color: rgb(0, 0, 0)! important;
 }
 
 .products-page {
@@ -77,6 +94,14 @@ body {
     position: fixed;
     background: beige;
     z-index: -1;
+}
+
+.footer-icon {
+    color: black;
+}
+
+footer{
+    margin-top: auto;
 }
 
 .card {
