@@ -319,3 +319,16 @@ footer{
 .btn-light {
     background-color: #f2c94c;
 }
+
+.font-small {
+    font-size: smaller;
+}
+
+.no-text-dec {
+    text-decoration: none;
+}
+
+.btn-black {
+    background-color: black;
+    color: #f2c94c;
+}
