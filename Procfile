@@ -1,1 +1,1 @@
-web: gunicorn kafe-analog.wsgi:application
+web: gunicorn kafe_analog.wsgi:application
