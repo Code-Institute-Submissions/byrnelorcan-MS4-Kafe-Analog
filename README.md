@@ -119,7 +119,7 @@ The Skeleton of the project design was built utilising [Figma](https://www.figma
 
 The overall basic design breakpoints can be seen below:
 
-![Wireframes]()
+![Wireframes](/media/mock.png)
 
 
 ### **Changes to initial wireframes** ###
@@ -134,7 +134,7 @@ The site aimed to be dark with bright elements. The colour choice was to be dark
 
 **Colour Theme**
 
-![Image](static/images/colours.png)
+![Image](media/color.png)
 
 **Typography**
 
