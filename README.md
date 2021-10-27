@@ -1,108 +1,353 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **MS4 - Kafe Analog**
 
-Welcome byrnelorcan,
+## **[View the Live Website Here!](https://kafe-analog.herokuapp.com/)** ##
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Image](static/images/mockup.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## **Code Institute Milestone 4 Project - Full Stack Frameworks Django**
+The project has been undertaken to build an efficient, simple and accessible online retail website. The site will enable users to purchase products, register as a user and access user only content. The site will also be fully functioning with payment application stripe.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+# Table of Contents:
+- [**UX**](#--ux--)
+  * [User Stories](#user-stories)
+  * [Strategy](#strategy)
+  * [Scope](#scope)
+  * [Structure](#structure)
+  * [Skeleton](#skeleton)
+    + [**Wireframes**](#--wireframes--)
+    + [**Changes to initial wireframes**](#--changes-to-initial-wireframes--)
+  * [Surface](#surface)
+- [**Features**](#--features--)
+  * [1. Landing Page](#1-landing-page)
+  * [2. Profile Page](#2-profile-page)
+  * [3. Login and Book Features](#3-login-and-book-features)
+- [**Technologies**](#--technologies--)
+  * [Languages](#languages)
+  * [Libraries, Frameworks and Technologies](#libraries--frameworks-and-technologies)
+  * [Workspace and Version Control](#workspace-and-version-control)
+- [**Testing**](#--testing--)
+  * [Code Validators](#code-validators)
+  * [Javascript](#javascript)
+  * [Python](#python)
+  * [Responsive Elements](#responsive-elements)
+  * [Search Accuracy and Functionality](#search-accuracy-and-functionality)
+  * [UX User Story Test](#ux-user-story-test)
+- [Deployment](#deployment)
+  * [Github Pages Deployment:](#github-pages-deployment-)
+  * [Forking The Repository:](#forking-the-repository-)
+  * [Creating a local clone:](#creating-a-local-clone-)
+  * [Heroku Deployment](#heroku-deployment)
+- [**Credits**](#--credits--)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+# **UX**
+## User Stories
+----------------
+In this project there are three groups of target users. They include general users, the admin and site owner and club members. The user stories for each group are defined below.
 
-Another blue button should appear to click: _Open Browser_.
+__Applicable to all users__
+- As a user, I want to be able to quickly understand the purpose of the site
+- As a user, I need to be able to navigate around the page in a standard format
+- As a user, I would like to see products that I can purchase without signing up to become a member of the page
+- As a user, I would like to know where the company is based and the team behind it.
+- As a user, I require the ability to see my cart, how much the total about is and what products have been added.
+- As a user, I would like the ability to register for more interesting topics.
+- As a user, the ability to purchase my products safely is a necessity. 
+- As a user, I require the need to be able to use the site on mobile, tablet and desktop.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+__General user__
+- As a general user, I require to be able to view and use elements of the site without logging in.
+- As a general user, I would like to still have the option to follow the link to buy without registering an account.
 
-To log into the Heroku toolbelt CLI:
+__Club member__
+- As a club member, I would like access to content that a user who is not a member cannot access, for example a blog or playlists etc. 
+- As a club member, I require access to a profile where I can see my order history.
+- As a club member, I need a seamless ability to sign in and log out.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+__Admin Users__
+- As a Super-user, I require the ability to edit, add and delete products for sale and listings.
+- As a Super-user, I need to add to the club blog post section. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## Strategy
+----------------
+__Project goals__
 
-## Release History
+The aim of this project is present the company products in a simple and clear but professional way. It was important to create a user-friendly and approachable site with a modern design and feel. The products have to be presented in a clear and familar way. This makes the site more accessible to users who are new to the site and need to find information quickly.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The features and content of the site therefore had to include;
+- Product Titles, Descriptions and Prices.
+- Familar genres and types.
+- An approachable user interface and registration/login functionality.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+__User goals__ 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The user goals will be met by enabling the user get access to the products, purchasing and blogs in a clear and concise format. The users require the ability to quickly search for their topic and filter out the irrelevant information. The users goals will be achieved through a landing page featuring nav links, a search element and registration/login option. There will also be links to the club section which is for registered users only.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Scope 
+----------------
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The site will be built for purpose and the content should be accesible and user friendly. The scope therefore includes:
+- A landing page featuring books with title images and relevant topics clearly displayed.
+- An ability to search from the landing page.
+- A log in function where the user inputs username and password.
+- A register function, the user will input relevant details and create a profile.
+- A profile page, displaying the books the user had added to the collection.
+- An ability to follow a link to purchase any book on the site through amazon.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Structure
+----------------
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The structure of the site is built around the main landing page where the user can see all the books in the collection and search through them.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. **Landing Page**
+- Simple landing page, with a search bar and simple cards showing the book title, and topics with a cover image. 
+- The cards will also feature the user rating out of 5.
+- The cards are interactive and when clicked will reveal author and a brief description of the book. 
+2. **Log In/Register Page**
+- This page enables the user to input a username and password.
+- The page will link to a register page where the user can input name and study topic.
+3. **Profile Page**
+- This page displays the user profile with their username and their study topics.
+- The books the user has added will be displayed along with an option to edit or delete the entries.
+4. **Add Book Page**
+- This page is directly linked in the nav bar and enables the user to add a book to the collection.
+- Consists of a simple form to fill out along with descriptions and the ability to add a purchase link.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Skeleton 
+----------------
+### **Wireframes** ###
 
-------
+The Skeleton of the project design was built utilising [Balsamiq](https://balsamiq.com/). 
 
-## FAQ about the uptime script
+The overall basic design breakpoints can be seen below:
 
-**Why have you added this script?**
+![Wireframes](static/images/wireframe.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### **Changes to initial wireframes** ###
+A number of design edits were made throughout the project with the purpose of increased userability and clarity. These include:
+- The navbar will be consistent throughout the pages.
+- The form field will feature a clearer more concise design with prompts.
+- The elements will be softer on the background and will not be large block features as seen above. 
+- The elements will have clear icons for user experience.
+ 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Surface 
+----------------
+The site aimed to be bright, clear and simple. The colour choice was to be light so that nothing distracts from the key data and information. The light will be contrasted with dark green nav and footer elements.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+**Colour Theme**
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Image](static/images/colours.png)
 
-**So….?**
+**Typography**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- The font used for both body and headings is [Lato
+Designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato). This font was chosen for its professionalism and clarity.
+I wanted to bring a modern design feel to the site and utilising a font that is widely used was effective.
+The site also has 'Sans Serif' as an alternative font.
 
-**Can I opt out?**
+# **Features**
+----------------
+## 1. Landing Page
+-----------------
+The landing page features a responsive card list of all books on the site. The page features a search bar to enable users to search through the collection. The feel of the site is light. The site navigation is clear and consistent with standard practice. Links to purchase the books are clearly visible with the user rating featured too.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Image](static/images/landing.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+----------------------
+## 2. Profile Page
+----------------------
+The profile page features a welcome element and displays the users fields of study along with the University they study in. The book additions that the user has made to the site are clearly diplayed on the profile. There are options fir the user to edit their collection and delete an entry they have made if required.
 
-**Anything more?**
+![Image](static/images/profile.png)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+---------------------
+## 3. Login and Book Features
+---------------------
+The login page is simple and displays prompts for the user to input their username and password. The site also features a link to register if the user has not yet done so.
 
----
+![Image](static/images/login.png)
 
-Happy coding!
+The add book page is a simple form with user prompts to input the required format. There is defensive programming employed to ensure the user does not input information in the wrong format. The user can add the purchase link and also can replace the image link if they can find an image url for their chosen book.
+
+![Image](static/images/book.png)
+
+
+# **Technologies**
+## Database
+---------------
+The database used was mongoDB. The data structure can be seen below:
+
+![Image](static/images/database.png)
+
+The content is broken down in clear descriptions with text inputs from the forms. The image and we links are stored as plain text. The naming convention was kept concise and relevant to the site.
+
+## Languages
+---------------
+For this project two languages were used:
+- [HTML](https://www.w3schools.com/html/#:~:text=HTML%20is%20the%20standard%20markup,learn%20%2D%20You%20will%20enjoy%20it!)
+- [CSS](https://www.w3schools.com/css/)
+- [Javascript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+
+## Libraries, Frameworks and Technologies
+---------------
+
+- [Materialize](https://materializecss.com/) - Materialize was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the site.
+
+- [Coolors](https://coolors.co) - Used to create colour palette and test colour themes.
+
+- [Google Fonts](https://fonts.google.com/) - Google font 'Lato' was included in the project.
+
+- [Font Awesome](https://fontawesome.com/) - All icons used throughout the project come from fontawesome.
+
+- [JQuery](https://jquery.com/) - Used for aspects of userability.
+
+- [MongoDB](https://www.mongodb.com/) - Used for the database.
+
+- [Mock-Up Generator](https://techsini.com/multi-mockup/index.php) - Used for title photo.
+
+- [Heroku](https://id.heroku.com/login) - Used for site deployment.
+
+- Werkzeug, PyMongo, Jinja and Flask - Frameworks used for templates, web application libraries and tooling for database link up.
+
+## Workspace and Version Control
+--------------------
+- [Github](https://github.com/) - The project is hosted on Github and the live website is worked through Github pages.
+
+- [Gitpod](https://www.gitpod.io/) - The project used Gitpod IDE for build and development. 
+
+# **Testing**
+## Code Validators 
+---------------
+A number of code validation techniques were utilised to ensure proper testing of site. 
+For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) and [W3C CSS Validation Services](https://jigsaw.w3.org/css-validator/). 
+See below for results.
+
+- HTML: A warning for Jinja template language. No other errors.
+- CSS: A warning for auto setting on height. No fix required. 
+
+
+## Javascript
+--------------
+A combination of [JSHint](https://jshint.com/) and manual testing was completed on the javascript to ensure adequate quality. 
+- Firefox warning from JSHint. No fix required
+- No errors found in manual test. JQuery from materialize used and functioned well.
+
+## Python
+--------------
+[PEP8 Online]() used to test Python. 
+
+- Over indentation found but was unable to fix.
+
+## Responsive Elements 
+--------------
+
+The responsivity of the page was tested primarily using [Google Chrome Dev Tools]() and manual resizing of windows. The test provided positive results for each 
+device option. The responsive breakpoints and resizing worked throughout the site. The site was shared with colleagues and friends and tested 
+on their devices. The site worked well on all devices tested and there was no problem with browser compatibility found during these tests.
+
+  
+## Search Accuracy and Functionality
+--------------
+Manual testing was completed and the following results were found:
+
+- The search function worked well.
+- The add, edit and delete functions completed their required tasks and were easy to use.
+- The login and register functions were tested and performed well.
+
+## UX User Story Test
+--------------
+The user stories previously laid out in the UX Design section are tested, to ensure that project achieves the user goals.
+
+
+__Applicable to all users__
+- *As a user, I would like to easily navigate and understand the site on landing.*
+  - The landing page is clear and nav bar displays all relevant links.
+- *As a user, I require a link to purchase the books.*
+  - A link to purchase books is available for each book card.
+- *As a user, the ability to log in and register is important.*
+  - The user has the ability to log in and register.
+- *As a user, I would like to be able to rate and review books, and add them to the site collection.*
+  - The user can add a number rating out of 5 and a detailed decription of the book for other users.
+- *As a user, I need to be able to search the collection for different topics.*
+  - The user has a search functionality available.
+
+__General user__
+- *As a general user, I require to be able to view and use elements of the site without logging in.*
+  - The user does not need to be logged in to use the main element of the site. The user can search and follow links to purchase without registering.
+- *As a general user, I would like to still have the option to follow the link to buy without registering an account.*
+  - The user can follow the purchase link from the landing page.
+
+__Admin Users__
+- *As an admin, I require the ability to edit and delete topics and books.*
+  - The admin has the key functions required to edit, delete or add any book on the database.
+- *As an admin, I need to access the books quickly with direct links to edit and delete functions.*
+ - The admin can easily access any book from the landing page or the admin profile page for uploads the admin has made. 
+
+
+
+# Deployment 
+
+## Github Pages Deployment:
+The project is deployed to GitHub Pages. To deploy the site follow the instruction below.
+1. In GitHub navigate to the []().
+2. Locate '_Settings_', navigate to '_Source_' and select _Master Branch_ from the dropdown and click _Save_.
+3. The site will be published and confirmation shown on the page.
+
+## Forking The Repository:
+To create a fork of the Repository simply:
+1. Navigate to the []().
+2. Select '_Fork_' on the right hand corner of the page.
+
+## Creating a local clone:
+1. In GitHub navigate to the []().
+2. Above the file list select '_Code_' with the download icon. 
+3. To clone select the copy icon at the far right side of URL.
+4. Open your terminal in respective IDE, and edit working directory to the desired location.
+5. Type `git clone` and paste copied URL.
+6. Select Enter and local clone will be created. 
+
+For more specific information relating to the clone follow this [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+## Heroku Deployment:
+This project is deployed using Heroku.
+
+- Log in or create a profile on Heroku. Select and create a new app, select the correct region and click “Create App”.
+- Select “Deploy” tab and “Deployment method” section. Click on GitHub.
+- Search for the repository, and click “Connect” next to the project repository.
+- Next, select the “Settings” tab, and scroll down to “Config Vars”.
+- Enter the Key and Value pairs as per your env file;
+- Go back to the “Deploy” tab, and scroll down to “Automatic deploys”. Select “Enable Automatic Deploys” then “Deploy Branch”.
+- The app will be built over a few minutes.
+- You can now click on “Open App” which will launch the deployed app.
+
+
+# **Credits**
+## Content
+--------------
+ - The Code Institute walkthrough project for backend development.
+ - The structure of the site from materialize CSS.
+
+## Media 
+--------------
+- All icons were sourced from [font awesome](https://fontawesome.com/)
+
+## Acknowledgements
+-------------- 
+Thanks to the [Code Institute](https://codeinstitute.net) for the tutorials and resources. 
