@@ -2,7 +2,7 @@
 
 ## **[View the Live Website Here!](https://kafe-analog.herokuapp.com/)** ##
 
-![Image](static/images/mockup.png)
+![Image](media/mockup.png)
 
 ## **Code Institute Milestone 4 Project - Full Stack Frameworks Django**
 The project has been undertaken to build an efficient, simple and accessible online retail website. The site will enable users to purchase products, register as a user and access user only content. The site will also be fully functioning with payment application stripe.
