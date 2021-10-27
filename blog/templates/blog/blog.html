@@ -15,20 +15,20 @@
     <div class="overlay"></div>
     <div class="container-fluid px-4 products-page">
         <div class="row gx-5">
-            <div class="col-6 p-3 my-auto">
+            <div class="col-12 col-md-6 p-3 my-auto">
                 <h3>Welcome to the Kafe Analog Club</h3>
                 <p>Here you'll find our ltest reviews, news and interesting pieces. All curated specially for our club members.</p>
             </div>
         </div>
         <div class="row">
             {% for blog in blog %}
-            <a href="{% url 'blog_detail' blog.id %}">
-                <div class="col-12 col-md-6">
-                    <div class="card blog-card bg-dark text-black">
+            <a class="col-12 col-md-6" href="{% url 'blog_detail' blog.id %}">
+                <div class="">
+                    <div class="card blog-card bg-dark text-light">
                         {% if blog.image %}
-                        <img class="card-img" src="{{ blog.image.url }}" alt="Card image">
+                        <img class="card-img" src="{{ blog.image.url }}" alt="Card image" style="opacity:0.4;">
                         {% else %}
-                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="Card image">
+                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="Card image" style="opacity:0.4;">
                         {% endif %}
                         
                         <div class="card-img-overlay">

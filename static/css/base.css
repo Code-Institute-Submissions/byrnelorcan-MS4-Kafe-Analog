@@ -96,6 +96,20 @@ body {
     z-index: -1;
 }
 
+.allauth-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.allauth-form-inner-content {
+    color: #f8f9fa;
+}
+
 .footer-icon {
     color: black;
 }
@@ -317,7 +331,7 @@ footer{
 }
 
 .btn-light {
-    background-color: #f2c94c;
+    background-color: #f2c94c! important;
 }
 
 .font-small {

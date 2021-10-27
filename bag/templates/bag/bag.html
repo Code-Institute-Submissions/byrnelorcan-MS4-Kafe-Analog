@@ -124,11 +124,11 @@
                     </div>
                 {% else %}
                     <p class="lead text-black mb-5">Your Cart is empty!</p>
-                    <a href="">
-                        <span>
+                    <a href="{% url 'products' %}" class="no-text-dec">
+                        <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Get back to shopping!</span>
+                        <span class="text-uppercase text-black">Get back to shopping!</span>
                     </a>
                 {% endif %}
             </div>
