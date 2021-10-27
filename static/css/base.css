@@ -350,3 +350,7 @@ footer{
 .text-info {
     color: #f2c94c! important;
 }
+
+.profile-page {
+    padding-bottom: 150px;
+}

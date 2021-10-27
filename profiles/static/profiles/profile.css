@@ -19,3 +19,17 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+footer{
+    margin-top: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page {
+    padding-bottom: 150px;
+}
