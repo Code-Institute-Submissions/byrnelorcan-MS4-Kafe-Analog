@@ -160,7 +160,7 @@ A number of design edits were made throughout the project with the purpose of in
 
 ## Surface 
 ----------------
-The site aimed to be dark with bright elements. The colour choice was to be dark so that nothing distracts from the key data and information. The light will be contrasted with dark green nav and footer elements.
+The site aimed to be dark with bright elements. The colour choice was to be dark so that nothing distracts from the key data and information. The light will be contrasted with bright yellow nav elements, white footer elements and a white background product page.
 
 **Colour Theme**
 
@@ -168,46 +168,64 @@ The site aimed to be dark with bright elements. The colour choice was to be dark
 
 **Typography**
 
-- The font used for both body and headings is [Lato
-Designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato). This font was chosen for its professionalism and clarity.
+- The font used for both body and headings is [Montserrat](https://fonts.google.com/specimen/Montserrat). This font was chosen for its professionalism and clarity.
 I wanted to bring a modern design feel to the site and utilising a font that is widely used was effective.
 The site also has 'Sans Serif' as an alternative font.
+- The main logo or title is [Comfortaa](https://fonts.google.com/specimen/Comfortaa)
 
 # **Features**
 ----------------
 ## 1. Landing Page
 -----------------
-The landing page features a responsive card list of all books on the site. The page features a search bar to enable users to search through the collection. The feel of the site is light. The site navigation is clear and consistent with standard practice. Links to purchase the books are clearly visible with the user rating featured too.
+- The landing page features a carosuel view with three slides displaying relevant background photos and links. The page features a modal search bar to enable users to search through the site. The nav displays a user profile icon that links to log in and registration. When logged in that will change to profile and log out etc. The user will also see their cart with the total amount.
 
-![Image](static/images/landing.png)
 
 ----------------------
 ## 2. Profile Page
 ----------------------
-The profile page features a welcome element and displays the users fields of study along with the University they study in. The book additions that the user has made to the site are clearly diplayed on the profile. There are options fir the user to edit their collection and delete an entry they have made if required.
-
-![Image](static/images/profile.png)
+- The profile page features the users order history and shipping details that are previously used. There are options for the user to edit their details and save for future use.
 
 ---------------------
-## 3. Login and Book Features
+## 3. Login and Register Features
 ---------------------
-The login page is simple and displays prompts for the user to input their username and password. The site also features a link to register if the user has not yet done so.
+- The login page is simple and displays prompts for the user to input their username/email and password. The site also features a link to register if the user has not yet done so. The registration page is simple and prompts username and emails, as well as passwords.
+---------------------
+## 4. Products, Detail and Bag Page
+---------------------
+**Products**
+- The products page features cards that display the products information and pricing. The site is fully responsive and also features a filter element so that users can filter from most expensive or A-Z etc.
+- Each product links to their product detail page.
 
-![Image](static/images/login.png)
+**Product Detail**
+- The product detail page features an accordion displaying a product description and then a breakdown of products details.
+- This page enables the user to add a product to their cart and navigate to continue shopping.
 
-The add book page is a simple form with user prompts to input the required format. There is defensive programming employed to ensure the user does not input information in the wrong format. The user can add the purchase link and also can replace the image link if they can find an image url for their chosen book.
+**Bag**
+- The bag page displays the items the user has placed in their bag.
+- There is the ability to add more quantity to the products if the user requires to do so.
+- The total cost is displayed, along with shipping costs and indivdual costs.
+- The page links to a secure checkout.
 
-![Image](static/images/book.png)
-
+---------------------
+## 5. Checkout Page
+---------------------
+- The checkout is a secure page with a payment form and a stripe function.
+- The card input element will display red if there is a card error or green if the card is accepted.
+- The user can also go back and adjust their bag if need be.
 
 # **Technologies**
 ## Database
 ---------------
-The database used was mongoDB. The data structure can be seen below:
+Two relational databases were used to create this site - during production SQLite was used and then Postgres was used for the deployed Heroku version. The data is broken down into:
+- Products:
+  - Categorys	
+  - Conditions
+  - Genres
+  - Products
 
-![Image](static/images/database.png)
+The data for users, orders and blogs is also stored.
 
-The content is broken down in clear descriptions with text inputs from the forms. The image and we links are stored as plain text. The naming convention was kept concise and relevant to the site.
+The content is broken down in clear descriptions with text inputs from the forms. The images are uploaded directly. The naming convention was kept concise and relevant to the site.
 
 ## Languages
 ---------------
@@ -220,7 +238,7 @@ For this project two languages were used:
 ## Libraries, Frameworks and Technologies
 ---------------
 
-- [Materialize](https://materializecss.com/) - Materialize was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the site.
+- [Bootstrap](https://bootstrap.com/) - Bootstrap was used to for its easy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the site.
 
 - [Coolors](https://coolors.co) - Used to create colour palette and test colour themes.
 
@@ -230,13 +248,13 @@ For this project two languages were used:
 
 - [JQuery](https://jquery.com/) - Used for aspects of userability.
 
-- [MongoDB](https://www.mongodb.com/) - Used for the database.
+- [Django](https://www.djangoproject.com/) - The main build of the site is around Django.
 
 - [Mock-Up Generator](https://techsini.com/multi-mockup/index.php) - Used for title photo.
 
 - [Heroku](https://id.heroku.com/login) - Used for site deployment.
 
-- Werkzeug, PyMongo, Jinja and Flask - Frameworks used for templates, web application libraries and tooling for database link up.
+-[AWS](https://aws.amazon.com/) - Used for file storage.
 
 ## Workspace and Version Control
 --------------------
@@ -251,7 +269,7 @@ A number of code validation techniques were utilised to ensure proper testing of
 For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) and [W3C CSS Validation Services](https://jigsaw.w3.org/css-validator/). 
 See below for results.
 
-- HTML: A warning for Jinja template language. No other errors.
+- HTML: Warnings related to user-id fields and javascript type label. No fix required
 - CSS: A warning for auto setting on height. No fix required. 
 
 
