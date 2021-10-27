@@ -254,7 +254,7 @@ For this project two languages were used:
 
 - [Heroku](https://id.heroku.com/login) - Used for site deployment.
 
--[AWS](https://aws.amazon.com/) - Used for file storage.
+- [AWS](https://aws.amazon.com/) - Used for file storage.
 
 ## Workspace and Version Control
 --------------------
@@ -270,20 +270,17 @@ For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) an
 See below for results.
 
 - HTML: Warnings related to user-id fields and javascript type label. No fix required
-- CSS: A warning for auto setting on height. No fix required. 
+- CSS: No errors. 
 
 
 ## Javascript
 --------------
 A combination of [JSHint](https://jshint.com/) and manual testing was completed on the javascript to ensure adequate quality. 
-- Firefox warning from JSHint. No fix required
-- No errors found in manual test. JQuery from materialize used and functioned well.
+- No errors found in manual test. Basic javascript from Code Institute Project Ado project.
 
 ## Python
 --------------
-[PEP8 Online]() used to test Python. 
-
-- Over indentation found but was unable to fix.
+Python was manually tested and functioned well. Some indentation issues and line length issues arose and are unable to fix.
 
 ## Responsive Elements 
 --------------
@@ -305,30 +302,45 @@ Manual testing was completed and the following results were found:
 --------------
 The user stories previously laid out in the UX Design section are tested, to ensure that project achieves the user goals.
 
-
 __Applicable to all users__
-- *As a user, I would like to easily navigate and understand the site on landing.*
-  - The landing page is clear and nav bar displays all relevant links.
-- *As a user, I require a link to purchase the books.*
-  - A link to purchase books is available for each book card.
-- *As a user, the ability to log in and register is important.*
-  - The user has the ability to log in and register.
-- *As a user, I would like to be able to rate and review books, and add them to the site collection.*
-  - The user can add a number rating out of 5 and a detailed decription of the book for other users.
-- *As a user, I need to be able to search the collection for different topics.*
-  - The user has a search functionality available.
+- As a user, I want to be able to quickly understand the purpose of the site
+  - The user lands on an informative site.
+- As a user, I need to be able to navigate around the page in a standard format
+  - The nav bar is clear and structured in a familar format.
+- As a user, I would like to see products that I can purchase without signing up to become a member of the page
+  - I can view all products without registering an account. 
+- As a user, I would like to know where the company is based and the team behind it.
+   - A brief introduction to the team is clear in the footer.
+- As a user, I require the ability to see my cart, how much the total about is and what products have been added.
+  - I can see my cart and the total amount
+- As a user, I would like the ability to register for more interesting topics.
+  - I can register and view blogsposts.
+- As a user, the ability to purchase my products safely is a necessity. 
+  - The secure checkout functions properly.
+- As a user, I require the need to be able to use the site on mobile, tablet and desktop.
+  - The site a has good responsive elements.
 
 __General user__
-- *As a general user, I require to be able to view and use elements of the site without logging in.*
-  - The user does not need to be logged in to use the main element of the site. The user can search and follow links to purchase without registering.
-- *As a general user, I would like to still have the option to follow the link to buy without registering an account.*
-  - The user can follow the purchase link from the landing page.
+- As a general user, I require to be able to view and use elements of the site without logging in.
+  - I can view all core elements of the site without the need to log in.
+- As a general user, I would like to still have the option to follow the link to buy without registering an account.
+  - I can purchase products without being a member of the site. 
+
+__Club member__
+- As a club member, I would like access to content that a user who is not a member cannot access, for example a blog or playlists etc. 
+  - As a club member I get access to the blog.
+- As a club member, I require access to a profile where I can see my order history.
+  - I can see order history and shipping details.
+- As a club member, I need a seamless ability to sign in and log out.
+  - I can log out and log in similar to standard practice.
 
 __Admin Users__
-- *As an admin, I require the ability to edit and delete topics and books.*
-  - The admin has the key functions required to edit, delete or add any book on the database.
-- *As an admin, I need to access the books quickly with direct links to edit and delete functions.*
- - The admin can easily access any book from the landing page or the admin profile page for uploads the admin has made. 
+- As a Super-user, I require the ability to edit, add and delete products for sale and listings.
+  - Admin has full CRUD functionality.
+- As a Super-user, I need to add to the club blog post section. 
+  - Admin can add blogpost.
+
+
 
 
 
@@ -358,21 +370,38 @@ For more specific information relating to the clone follow this [link](https://d
 ## Heroku Deployment:
 This project is deployed using Heroku.
 
-- Log in or create a profile on Heroku. Select and create a new app, select the correct region and click “Create App”.
-- Select “Deploy” tab and “Deployment method” section. Click on GitHub.
-- Search for the repository, and click “Connect” next to the project repository.
-- Next, select the “Settings” tab, and scroll down to “Config Vars”.
-- Enter the Key and Value pairs as per your env file;
-- Go back to the “Deploy” tab, and scroll down to “Automatic deploys”. Select “Enable Automatic Deploys” then “Deploy Branch”.
-- The app will be built over a few minutes.
-- You can now click on “Open App” which will launch the deployed app.
+1. ### Requirements and Procfile
+- In the GitPod terminal, type pip3 freeze --local > requirements.txt to create your requirements file.
+- Create your Procfile and insert the following code: web: gunicorn kafe-analog.wsgi:application
 
+2. ### Creating Heroku App
+- Log into Heroku
+- Select 'Create New App' from your dashboard
+- Choose an app name
+- Select the appropriate region based on your location
+- Click 'Create App'
+
+3. ### Connecting to GitHub
+- From the dashboard, click the 'Deploy'
+- Go to 'Deployment Method' and choose 'GitHub'
+- Locate your repository by name , click 'Connect'
+ 
+4. ### Environment Variables
+- Click the 'Settings' tab towards the top of the page
+- Go to 'Reveal Config Vars':
+  - Input your relevant variable names.
+
+5. ### Deployment
+- 'Manual Deploy' choose the master branch and click 'Deploy Branch'.
+- Click 'Open App' from the top of the page.
 
 # **Credits**
 ## Content
 --------------
- - The Code Institute walkthrough project for backend development.
- - The structure of the site from materialize CSS.
+ - The project backend structure came from the Code Institute Boutique Ado Project.
+ - The structure of the site from Bootstrap.
+ - All images for products come from google search of high quality images.
+ - Unsplash was used for free high quality images.
 
 ## Media 
 --------------
