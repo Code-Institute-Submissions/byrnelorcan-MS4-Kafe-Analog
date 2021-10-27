@@ -1,0 +1,1 @@
+web: gunicorn kafe-analog.wsgi:application
