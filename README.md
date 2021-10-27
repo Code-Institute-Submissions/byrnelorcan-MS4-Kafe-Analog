@@ -7,45 +7,15 @@
 ## **Code Institute Milestone 4 Project - Full Stack Frameworks Django**
 The project has been undertaken to build an efficient, simple and accessible online retail website. The site will enable users to purchase products, register as a user and access user only content. The site will also be fully functioning with payment application stripe.
 
+The project is based around a fictional music and coffee shop, that wants to extend the online presence and make more revenue from selling products online. The comapny is called Kafe Analog, and sells a range of vinyl records and bespoke coffee products.
+
+The structure for the site is focused on an ecommerce site that is fully functioning with user authentication and a payment process. The site is designed to be fully responsive and function on a wide range of devices.
+
 
 
 
 
 # Table of Contents:
-- [**UX**](#--ux--)
-  * [User Stories](#user-stories)
-  * [Strategy](#strategy)
-  * [Scope](#scope)
-  * [Structure](#structure)
-  * [Skeleton](#skeleton)
-    + [**Wireframes**](#--wireframes--)
-    + [**Changes to initial wireframes**](#--changes-to-initial-wireframes--)
-  * [Surface](#surface)
-- [**Features**](#--features--)
-  * [1. Landing Page](#1-landing-page)
-  * [2. Profile Page](#2-profile-page)
-  * [3. Login and Book Features](#3-login-and-book-features)
-- [**Technologies**](#--technologies--)
-  * [Languages](#languages)
-  * [Libraries, Frameworks and Technologies](#libraries--frameworks-and-technologies)
-  * [Workspace and Version Control](#workspace-and-version-control)
-- [**Testing**](#--testing--)
-  * [Code Validators](#code-validators)
-  * [Javascript](#javascript)
-  * [Python](#python)
-  * [Responsive Elements](#responsive-elements)
-  * [Search Accuracy and Functionality](#search-accuracy-and-functionality)
-  * [UX User Story Test](#ux-user-story-test)
-- [Deployment](#deployment)
-  * [Github Pages Deployment:](#github-pages-deployment-)
-  * [Forking The Repository:](#forking-the-repository-)
-  * [Creating a local clone:](#creating-a-local-clone-)
-  * [Heroku Deployment](#heroku-deployment)
-- [**Credits**](#--credits--)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgements](#acknowledgements)
-
 
 # **UX**
 ## User Stories
