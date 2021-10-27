@@ -27,7 +27,18 @@
             </div>
         </div>
         <div class="row">
-            {{ blog.blog_content }}
+            <div class="col-12">
+                <img src="{{ blog.image.url }}" alt="blog-img" class="img-thumbnail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <hr>
+                    {{ blog.blog_content }}
+                    <hr>
+                </p>
+            </div>
         </div>
         
     </div>
