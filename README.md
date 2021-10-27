@@ -98,57 +98,69 @@ The user goals will be met by enabling the user get access to the products, purc
 ----------------
 
 The site will be built for purpose and the content should be accesible and user friendly. The scope therefore includes:
-- A landing page featuring books with title images and relevant topics clearly displayed.
-- An ability to search from the landing page.
+- A landing page featuring nav links and topics clearly displayed.
+- The ability to learn about the company and what products available.
+- An ability to search from the landing page, access a user profile and login/register.
 - A log in function where the user inputs username and password.
 - A register function, the user will input relevant details and create a profile.
-- A profile page, displaying the books the user had added to the collection.
-- An ability to follow a link to purchase any book on the site through amazon.
+- A profile page, displaying the order history of the user and the previous saved shipping detail.
+- An ability to add products to cart and checkout safely and securley.
+- An registered-access only element that displays blogs and news etc.
 
 
 
 ## Structure
 ----------------
 
-The structure of the site is built around the main landing page where the user can see all the books in the collection and search through them.
+The structure of the site is built around the main landing page where the user can navigate and search through the page.
 
 
 1. **Landing Page**
-- Simple landing page, with a search bar and simple cards showing the book title, and topics with a cover image. 
-- The cards will also feature the user rating out of 5.
-- The cards are interactive and when clicked will reveal author and a brief description of the book. 
+- Simple landing page, with carosuel showing links and relevant images.
+- A navbar that directs users to product pages, blogs and profiles.
+- Nav elements will also have a modal search and active cart element.
+- The footer of the page will diplay some info about the company and further nav elements to social media etc.
 2. **Log In/Register Page**
 - This page enables the user to input a username and password.
-- The page will link to a register page where the user can input name and study topic.
+- The page will link to a register page where the user can register details.
 3. **Profile Page**
-- This page displays the user profile with their username and their study topics.
-- The books the user has added will be displayed along with an option to edit or delete the entries.
-4. **Add Book Page**
-- This page is directly linked in the nav bar and enables the user to add a book to the collection.
-- Consists of a simple form to fill out along with descriptions and the ability to add a purchase link.
+- This page displays the user profile with their order history and shipping details.
+4. **Products Page**
+- This page displays filtered products and enables the user to click to find out more information.
+- The product cards will show images and names, genres and pricing.
+5. **Products Detail**
+- The detail page will display product descriptions and pricing.
+- This page will enable the user to add the product to their cart.
+- The detail will also display if the product is in stock or not.
+6. **Checkout Page**
+- The checkout enables the user to pay for their items and add shipping details relevant to their order.
+- This will be a safe secure checkout using stripe.
+7. **Blog Page**
+- The blog/ club will display only to users who are registered.
+- The content will be relevant to the company goals and areas of interest.
+
+
 
 ## Skeleton 
 ----------------
 ### **Wireframes** ###
 
-The Skeleton of the project design was built utilising [Balsamiq](https://balsamiq.com/). 
+The Skeleton of the project design was built utilising [Figma](https://www.figma.com/). 
 
 The overall basic design breakpoints can be seen below:
 
-![Wireframes](static/images/wireframe.png)
+![Wireframes]()
 
 
 ### **Changes to initial wireframes** ###
 A number of design edits were made throughout the project with the purpose of increased userability and clarity. These include:
 - The navbar will be consistent throughout the pages.
-- The form field will feature a clearer more concise design with prompts.
-- The elements will be softer on the background and will not be large block features as seen above. 
-- The elements will have clear icons for user experience.
+- The landing page will feature an image carosuel that has relevant product links.
  
 
 ## Surface 
 ----------------
-The site aimed to be bright, clear and simple. The colour choice was to be light so that nothing distracts from the key data and information. The light will be contrasted with dark green nav and footer elements.
+The site aimed to be dark with bright elements. The colour choice was to be dark so that nothing distracts from the key data and information. The light will be contrasted with dark green nav and footer elements.
 
 **Colour Theme**
 

@@ -21,21 +21,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/media/recordview.jpg" class="landing-image d-block w-100" alt="...">
+        <img src="{{ MEDIA_URL }}/media/recordview.jpg" class="landing-image d-block w-100" alt="record shop view">
         <div class="carousel-caption ">
           <h4>Shop our latest Vinyl Collection</h4>
           <p>Find our collection of records<a href="{% url 'products' %}?category=vinyl" class="landing-link"> here!</a></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/media/clubview.jpg" class="landing-image d-block w-100" alt="...">
+        <img src="{{ MEDIA_URL }}/media/clubview.jpg" class="landing-image d-block w-100" alt="record store people view">
         <div class="carousel-caption  ">
             <h4>Join the Analog Club</h4>
             <p>Keep up with the latest releases and trend blogposts<a href="{% url 'blog' %}" class="landing-link"> here!</a></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/media/coffeeview.jpg" class="landing-image d-block w-100" alt="...">
+        <img src="{{ MEDIA_URL }}/media/coffeeview.jpg" class="landing-image d-block w-100" alt="coffee pour images">
         <div class="carousel-caption ">
             <h4>Shop our latest Coffee Collection</h4>
             <p>Find our range of bespoke coffee<a href="{% url 'products' %}?category=vinyl" class="landing-link"> here!</a></p>
