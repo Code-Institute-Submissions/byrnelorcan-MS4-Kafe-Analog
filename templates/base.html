@@ -140,14 +140,14 @@
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <li><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></li>
-                        <li><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></li>
+                        <span><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
+                        <span><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
                       {% endif %}
-                      <li><a href="{% url 'profile' %}" class="nav-link">Profile</a></li>
-                      <li><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
+                      <span><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                      <span><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
                     {% else %}
-                      <li><a href="{% url 'account_signup' %}" class="nav-link">Register</a></li>
-                      <li><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
+                      <span><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                      <span><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                     {% endif %}
                 </li>
                 <li class="nav-item">
@@ -190,14 +190,14 @@
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <li><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></li>
-                        <li><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></li>
+                        <span><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
+                        <span><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
                       {% endif %}
-                      <li><a href="{% url 'profile' %}" class="nav-link">Profile</a></li>
-                      <li><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
+                      <span><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                      <span><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
                     {% else %}
-                      <li><a href="{% url 'account_signup' %}" class="nav-link">Register</a></li>
-                      <li><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
+                      <span><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                      <span><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                     {% endif %}
                 </li>
                 <li class="nav-item">
@@ -247,7 +247,7 @@
         </div>
 
         {% block postloadjs %}
-        <script type="text/javascript">
+        <script>
         // The code below is taken from Richard Ash of CI on SLACK for the initialisation of toasts in Bootstrap5 //
           let toastElList = [].slice.call(document.querySelectorAll('.toast'))
           let toastList = toastElList.map(function (toastEl) {
@@ -298,7 +298,7 @@
                 </div>
             </div>
         </div>
-          <header class="container-fluid footer-style">
+          <div class="container-fluid footer-style">
             <div class="row">
               <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link footer-logo-link text-black">
@@ -319,7 +319,7 @@
                 Copyright Info  
               </div>
             </div>
-          </header>
+          </div>
         </footer>
   </body>
 </html>
