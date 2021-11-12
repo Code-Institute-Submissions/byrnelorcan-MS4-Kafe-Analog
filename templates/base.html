@@ -57,7 +57,7 @@
                   <button class="btn" type="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="far fa-user icon"></i>
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+                  <ul class="dropdown-menu" aria-labelledby="dropdown-menu">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                         <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
@@ -140,14 +140,14 @@
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <span><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
-                        <span><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
+                        <span class="dropdown-item"><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
+                        <span class="dropdown-item"><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
                       {% endif %}
-                      <span><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
-                      <span><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                      <span class="dropdown-item"><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
                     {% else %}
-                      <span><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
-                      <span><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                     {% endif %}
                 </li>
                 <li class="nav-item">
@@ -190,14 +190,14 @@
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <span><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
-                        <span><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
+                        <span class="dropdown-item"><a href="{% url 'add_product' %}" class="nav-link">Product Management</a></span>
+                        <span class="dropdown-item"><a href="{% url 'add_blog' %}" class="nav-link">Blog Management</a></span>
                       {% endif %}
-                      <span><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
-                      <span><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                      <span class="dropdown-item"><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
                     {% else %}
-                      <span><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
-                      <span><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                      <span class="dropdown-item"><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                     {% endif %}
                 </li>
                 <li class="nav-item">
