@@ -60,14 +60,14 @@
                   <ul class="dropdown-menu" aria-label="dropdown-menu">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <span class="dropdown-item"><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></span>
-                        <span class="dropdown-item"><a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a></span>
+                        <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                        <li><a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a></li>
                       {% endif %}
-                      <span class="dropdown-item"><a href="{% url 'profile' %}">Profile</a></span>
-                      <span class="dropdown-item"><a href="{% url 'account_logout' %}">Logout</a></span>
+                      <li><a href="{% url 'profile' %}" class="dropdown-item">Profile</a></li>
+                      <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                     {% else %}
-                      <span class="dropdown-item"><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></span>
-                      <span class="dropdown-item"><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></span>
+                      <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                      <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                     {% endif %}
                   </ul>
                 </div>
