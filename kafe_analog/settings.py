@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
 
-    #Other Apps:
+    # Other Apps:
     'crispy_forms',
     'storages',
 ]
@@ -80,7 +80,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -105,7 +105,6 @@ AUTHENTICATION_BACKENDS = [
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 SITE_ID = 1
-
 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -133,8 +132,6 @@ else:
              'NAME': BASE_DIR / 'db.sqlite3',
         }
      }
-
-
 
 
 # Password validation
@@ -201,7 +198,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-    #MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
@@ -225,7 +221,6 @@ else:
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
