@@ -354,3 +354,13 @@ footer{
 .profile-page {
     padding-bottom: 150px;
 }
+
+@media screen and (max-width: 1300px) {
+    .team-photo {
+        padding: 6rem;
+    }
+
+    .info-style {
+        padding: 6rem;
+    }
+}
