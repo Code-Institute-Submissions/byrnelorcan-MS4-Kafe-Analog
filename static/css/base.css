@@ -60,12 +60,12 @@ body {
 }
 
 .info-style {
-    padding: 30px;
+    padding: 6rem;
     font-weight: 300;
 }
 
 .team-photo {
-    padding: 1.25rem;
+    padding: 6rem;
     align-items: center;
 }
 
@@ -357,10 +357,11 @@ footer{
 
 @media screen and (max-width: 1300px) {
     .team-photo {
-        padding: 6rem;
+        padding: 1.5rem;
+        align-items: center;
     }
 
     .info-style {
-        padding: 6rem;
+        padding: 30px;
     }
 }
