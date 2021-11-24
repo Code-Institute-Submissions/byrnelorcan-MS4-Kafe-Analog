@@ -236,6 +236,10 @@ footer{
     white-space: pre-line;
 }
 
+.blog-row {
+    padding-top: 15px;
+}
+
 /* Allauth form formatting */
 
 .form-group {
