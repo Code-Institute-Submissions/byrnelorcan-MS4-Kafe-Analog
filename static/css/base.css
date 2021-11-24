@@ -231,6 +231,11 @@ footer{
     border-bottom-color: #343a40 !important;
 }
 
+.blog-content {
+    padding: 1.2rem;
+    white-space: pre-line;
+}
+
 /* Allauth form formatting */
 
 .form-group {
