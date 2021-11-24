@@ -233,6 +233,10 @@ footer{
 
 /* Allauth form formatting */
 
+.form-group {
+    padding: 3px;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -354,6 +358,8 @@ footer{
 .profile-page {
     padding-bottom: 150px;
 }
+
+/*-- MEDIA RESPONSIVE ELEMENTS --*/
 
 @media screen and (max-width: 1300px) {
     .team-photo {
