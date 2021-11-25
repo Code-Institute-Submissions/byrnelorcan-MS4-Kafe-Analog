@@ -388,3 +388,10 @@ footer{
         padding-bottom: 1.25rem;
     }
 }
+
+@media screen and (max-width: 903px) {
+    .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
