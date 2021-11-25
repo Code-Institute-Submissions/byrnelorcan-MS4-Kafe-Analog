@@ -368,6 +368,10 @@ footer{
     padding-bottom: 150px;
 }
 
+.carousel-caption {
+    padding-bottom: 373px;
+}
+
 /*-- MEDIA RESPONSIVE ELEMENTS --*/
 
 @media screen and (max-width: 1300px) {
@@ -378,5 +382,9 @@ footer{
 
     .info-style {
         padding: 30px;
+    }
+
+    .carousel-caption {
+        padding-bottom: 1.25rem;
     }
 }
