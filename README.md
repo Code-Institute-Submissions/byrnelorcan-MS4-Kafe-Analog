@@ -245,7 +245,7 @@ A number of code validation techniques were utilised to ensure proper testing of
 For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) and [W3C CSS Validation Services](https://jigsaw.w3.org/css-validator/). 
 See below for results.
 
-- HTML: Warnings related to user-id fields and javascript type label. No fix required
+- HTML: All sites pass validation.
 - CSS: No errors. 
 
 
@@ -256,7 +256,9 @@ A combination of [JSHint](https://jshint.com/) and manual testing was completed 
 
 ## Python
 --------------
-Python was manually tested and functioned well. Some indentation issues and line length issues arose and are unable to fix.
+Python was manually tested and functioned well. Some indentation issues and line length issues arose.
+
+Please note the line-length and indentation issues have been fixed where possible, however, for clarity and ease of use some line lengths have been left to be greater than the standard 79 character limit. Please not that this is done for readability and productivity. Where possible they have been edited to be PEP8 compliant, but other instances have been left for contextual reasons. For example, a comment explaining why the element is required. 
 
 ## Responsive Elements 
 --------------
@@ -322,6 +324,8 @@ __Admin Users__
 
 # Deployment 
 
+The following section shows a brief overview of project deployment. For more in-depth review please refer to the relevant documentation. 
+
 ## Github Pages Deployment:
 The project is deployed to GitHub Pages. To deploy the site follow the instruction below.
 1. In GitHub navigate to the []().
@@ -366,10 +370,28 @@ This project is deployed using Heroku.
 - Click the 'Settings' tab towards the top of the page
 - Go to 'Reveal Config Vars':
   - Input your relevant variable names.
+- The Config Vars are as follows:
+  - DATABASE_URL (Database URL)
+  - SECRET_KEY (secret key)
+  - STRIPE_PUBLIC_KEY (Stripe public key)
+  - STRIPE_SECRET_KEY (Stripe secret key)
+  - STRIPE_WH_KEY (Stripe webhook key if using)
+  - USE_AWS (set True)
 
 5. ### Deployment
 - 'Manual Deploy' choose the master branch and click 'Deploy Branch'.
 - Click 'Open App' from the top of the page.
+
+## AWS Set Up:
+The static files and images are hosted via AWS using the following steps. Note this is an overview. For more indepth detail please follow the steps provided via the links.
+
+- Sign up and set up for [AWS](https://aws.amazon.com/).
+- Create AWS S3 Bucket, with a bucket and access policy, featuring a user and group. Please follow the outlined instructions [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html).
+- Django and AWS Database can be connected via the information provided [here](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
+- Once this process is complete add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to the Heroku config vars.
+
+Please note this is an overview of AWS set up. Please refer to the [AWS S3 Documentation](https://docs.aws.amazon.com/s3/index.html) for further insight.
+
 
 # **Credits**
 ## Content
