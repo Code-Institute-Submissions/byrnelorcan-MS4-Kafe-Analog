@@ -186,16 +186,22 @@ The site also has 'Sans Serif' as an alternative font.
 # **Technologies**
 ## Database
 ---------------
-Two relational databases were used to create this site - during production SQLite was used and then Postgres was used for the deployed Heroku version. The data is broken down into:
-- Products:
-  - Categorys	
-  - Conditions
-  - Genres
-  - Products
+Two relational databases were used to create this site - during production SQLite was used and then Postgres was used for the deployed Heroku version.
 
-The data for users, orders and blogs is also stored.
+The database model is extended from Django-Allauth, which enables user authentication, email and password verification functionality.
+
+The database functionality: 
+- Registered users and emails feed into the User profile.
+- Models for genres, condition, category are linked to the products.
+- Once an order is created the user profile and product data is linked in the orderline item.
+- The blog is a standalone model, only utilised as an add-on for registered users.
 
 The content is broken down in clear descriptions with text inputs from the forms. The images are uploaded directly. The naming convention was kept concise and relevant to the site.
+
+The schema is seen below:
+
+![Database Design](/media/db.png)
+
 
 ## Languages
 ---------------
