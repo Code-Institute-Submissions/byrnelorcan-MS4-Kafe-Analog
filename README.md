@@ -345,7 +345,7 @@ To create a fork of the Repository simply:
 5. Type `git clone` and paste copied URL.
 6. Select Enter and local clone will be created. 
 
-For more specific information relating to the clone follow this [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+For more specific information relating to the clone follow this [link.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 ## Heroku Deployment:
 This project is deployed using Heroku.
